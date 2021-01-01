@@ -1,0 +1,31 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>RAILWAY RESERVATION SYSTEM</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/passcss.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+                <h1><a href="/">WELCOME TO RAILWAY RESERVATIONS</a></h1>
+            {% if user.is_authenticated %}
+                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                <a href="{% url 'passenger_new' %}" class="top-menu"><h3>Next</h3></a>
+
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+            {% endif %}
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

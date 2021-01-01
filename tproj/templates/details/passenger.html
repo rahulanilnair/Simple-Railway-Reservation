@@ -1,0 +1,28 @@
+{% extends "details/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="{% static 'css/passcss.css' %}">
+        <title>railway reservation form </title>
+        
+		
+    </head>
+<body>
+	<header>
+
+	</header>
+<h1 class="home">HOME</h1>
+        <h2>RESERVATION FORM</h2>
+    <caption>
+    </caption>
+ 
+{% block content %}
+    <form method="POST" class="passenger-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+</body>
+</html>
