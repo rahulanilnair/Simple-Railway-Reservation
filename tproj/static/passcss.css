@@ -1,0 +1,54 @@
+h1, h2{
+	text-align:center;
+	font-family:monaco;
+	color: rgb(18, 26, 0);
+	text-decoration:underline;
+}
+caption{
+	text-aling:center;
+}
+body{
+	background-image: url("bg-pic.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:100%;
+	background-position:center;
+	
+}
+.hello{
+	color: #6600cc;
+	font-weight: bold;
+	font-size:100;
+	}
+
+.trip{
+	background-image: url("bg-pic.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:100%;
+	background-position:center;
+	
+}
+
+.ticket{
+	background-image: url("ticket1-bg.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:100%;
+	background-position:center;
+}
+header{
+	background: #07548B;
+}
+
+.base{
+	background-image: url("base-bg.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:100%;
+	background-position:center;
+}
